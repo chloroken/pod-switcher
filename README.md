@@ -1,1 +1,48 @@
-# eve-switcher
+# pod-switcher
+
+This is a replacement for **EVE-O Preview** for Linux.
+
+## Installation
+1) `sudo dnf install xdotool`
+2) `sudo dnf install git`
+3) `git clone https://gitub.com/chloroken/pod-switcher/`
+4) Add your characters to `characters.txt` with format `"EVE - Characternamehere"`
+5) Set up keybinds. See section below for details
+6) Log into your characters and use your keybind for `refreshpids.sh`
+7) Now you can use `switch.sh` keybinds to change clients
+
+## Keybinds
+There are numerous ways to accomplish keybinding the scripts. In XFCE for example, the `xfce4-keyboard-settings` package allows binding bash scripts to keys.
+
+However, not all distros will have this functionality. For those without a keybind manager, consider the following solution:
+1) Install the hotkey daemon: `sudo dnf install sxhkd`
+2) Create an sxhkd config file: `nano /home/chloroken/.config/sxhkd/sxhkdrc`
+3) Use the following text as an example config file, noting the arguments `"1"`, `"2"`:
+
+```
+  F1
+      bash ~/Documents/pod-switcher/switch.sh "1"
+  F2
+      bash ~/Documents/pod-switcher/switch.sh "2"
+  F3
+      bash ~/Documents/pod-switcher/switch.sh "3"
+  F4
+      bash ~/Documents/pod-switcher/switch.sh "4"
+  F5
+      bash ~/Documents/pod-switcher/refreshpids.sh
+```
+
+## Uninstall:
+  - Remove installation folder: `rm -rf /path/to/your/install/pod-switcher/`
+  - Remove temporary text file: `rm /tmp/pids.txt`
+
+## To-Do:
+  - ~~Combine keybind scripts with arguments~~
+  - ~~Fix leading linebreak on 'characters.txt'~~
+  - ~~Remove dead frames while switching~~
+  - ~~Create safeguards for when keybinds can't work~~
+      ~~- e.g., `switch.sh "5"` with only 4 characters, etc.~~
+  ~~- Run profiling to improve switching speeds~~
+  ~~- Create a service for keybinds~~
+  - Add thumbnail preview toggle support
+  - Package script bundle with Makefile
