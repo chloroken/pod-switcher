@@ -15,7 +15,7 @@ This is a replacement for **EVE-O Preview** for Linux.
 There are numerous ways to accomplish keybinding the scripts. In XFCE for example, the `xfce4-keyboard-settings` package allows binding bash scripts to keys if that command is in the `sh 'bash command here'` format. KDE and Gnome should offer similar functionality with their own packages.
 
 However, not all distros have this functionality. For those without a keybind manager, consider the following solution:
-1) Install the hotkey daemon: `sudo dnf install sxhkd`
+1) Install Simple X Hotkey Daemon: `sudo dnf install sxhkd`
 2) Create an sxhkd config file: `nano /home/chloroken/.config/sxhkd/sxhkdrc`
 3) Use the following text as an example config file, noting the arguments `"1"`, `"2"`:
 
@@ -41,8 +41,8 @@ However, not all distros have this functionality. For those without a keybind ma
   - ~~Fix leading linebreak on 'characters.txt'~~
   - ~~Remove dead frames while switching~~
   - ~~Create safeguards for when keybinds can't work~~
-      ~~- e.g., `switch.sh "5"` with only 4 characters, etc.~~
-  ~~- Run profiling to improve switching speeds~~
-  ~~- Create a service for keybinds~~
+      - ~~e.g., `switch.sh "5"` with only 4 characters, etc.~~
+  - ~~Run profiling to improve switching speeds~~
+  - ~~Create a service for keybinds~~
   - Add thumbnail preview toggle support
   - Package script bundle with Makefile
