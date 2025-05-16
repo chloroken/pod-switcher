@@ -14,10 +14,10 @@ This is a replacement for **EVE-O Preview** for Linux.
 ## Keybinds
 There are numerous ways to accomplish keybinding the scripts. In XFCE for example, the `xfce4-keyboard-settings` package allows binding bash scripts to keys if that command is in the `sh 'bash command here'` format. KDE and Gnome should offer similar functionality with their own packages.
 
-However, not all distros have this functionality. For those without a keybind manager, consider the following solution:
+However, not all desktop environments have this functionality. For those without a keybind manager, consider the following solution:
 1) Install Simple X Hotkey Daemon: `sudo dnf install sxhkd`
 2) Set sxhkd to run on startup (on XFCE use: `xfce4-session-settings`)
-3) Create an sxhkd config file: `nano /home/chloroken/.config/sxhkd/sxhkdrc`
+3) Create an sxhkd config file: `nano ~/.config/sxhkd/sxhkdrc`
 4) Use the following text as an example config file, noting the arguments `"1"`, `"2"`:
 
 ```
