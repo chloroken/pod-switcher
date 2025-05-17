@@ -1,6 +1,6 @@
 # pod-switcher
 
-This is a replacement for **EVE-O Preview** for Linux.
+This is a lightweight client switcher for EVE Online designed to replace the need to set up Window's EVE-O Preview in WINE.
 
 ## Installation
 1) `sudo dnf install xdotool`
