@@ -1,6 +1,6 @@
 # pod-switcher
 
-This is a Linux, X11-based client-switcher for EVE Online. It's faster than most other workspace packages and minimizes inactive windows to improve multibox performance.
+A Linux, X11-based client-switcher for EVE Online. It's faster than most other workspace packages and minimizes inactive windows to improve multibox performance. It does not feature thumbnail previews.
 
 ## Installation (using Fedora as an example)
 1) Install dependency: `sudo dnf install xdotool`
