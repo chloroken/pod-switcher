@@ -1,11 +1,11 @@
 # pod-switcher
 
-This is a lightweight client switcher for EVE Online designed to replace the need to set up Window's EVE-O Preview in WINE.
+This is a Linux, X11-based client-switcher for EVE Online. It's faster than most other workspace packages and minimizes inactive windows to improve multibox performance.
 
-## Installation
-1) `sudo dnf install xdotool`
-2) `sudo dnf install git`
-3) `git clone https://gitub.com/chloroken/pod-switcher/`
+## Installation (using Fedora as an example)
+1) Install dependency: `sudo dnf install xdotool`
+2) Install dependency: `sudo dnf install git`
+3) Copy this repo: `git clone https://gitub.com/chloroken/pod-switcher/`
 4) Add your characters to `characters.txt` with format `"EVE - Characternamehere"`
 5) Set up keybinds. See section below for details
 6) Log into your characters and use your keybind for `refreshpids.sh`
