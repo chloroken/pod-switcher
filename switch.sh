@@ -9,15 +9,17 @@ if [ "$1" -gt "${#pids_array[@]}" ]; then
    exit
 fi
 
-# Activate target ($tar) window
+# Activate target window
 tar="${pids_array["$1-1"]}"
 xdotool windowactivate --sync "$tar"
-# --sync is important, otherwise the mouse won't be
-# "ready to click" (need to move it) after each switch
+# --sync is important, otherwise mouse cannot
+# click after each switch until it's moved
 
-# Minimize other windows in background (&)
+# Minimize other windows
 for pid in "${pids_array[@]}"; do
    if [ "$pid" != "$tar" ]; then
       xdotool windowminimize "$pid" &
    fi
 done
+# Running minimize commands in background (&)
+# prevents "bogging down" with rapid use
