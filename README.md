@@ -3,18 +3,17 @@
 A Linux, X11-based client-switcher for EVE Online. It's faster than most other workspace packages and minimizes inactive windows to improve multibox performance. It does not feature thumbnail previews.
 
 ## Installation (using Fedora as an example)
-1) Install dependency: `sudo dnf install xdotool`
-2) Install dependency: `sudo dnf install git`
-3) Copy this repo: `git clone https://gitub.com/chloroken/pod-switcher/`
-4) Add your characters to `characters.txt` with format `"EVE - Characternamehere"`
-5) Set up keybinds. See section below for details
-6) Log into your characters and use your keybind for `refreshpids.sh`
-7) Now you can use `switch.sh` keybinds to change clients
+1) Install dependencies: `sudo dnf install xdotool git`
+2) Copy repo: `git clone https://gitub.com/chloroken/pod-switcher/`
+3) Add your characters to `characters.txt` with format `"EVE - Characternamehere"` (including quotes)
+4) Set up keybinds. See **Keybinds** section below for details.
+5) Log into your characters and use your keybind for `refreshpids.sh`
+6) Now you can use `switch.sh` keybinds to change clients
 
 ## Keybinds
 There are numerous ways to accomplish keybinding the scripts. In XFCE for example, the `xfce4-keyboard-settings` package allows binding bash scripts to keys if that command is in the `sh 'bash command here'` format. KDE and Gnome should offer similar functionality with their own packages.
 
-However, not all desktop environments have this functionality. For those without a keybind manager, consider the following solution:
+However, not all desktop environments have this functionality. For those without a keybind manager that allows one to easily run scripts, consider the following solution:
 1) Install Simple X Hotkey Daemon: `sudo dnf install sxhkd`
 2) Set sxhkd to run on startup (on XFCE use: `xfce4-session-settings`)
 3) Create an sxhkd config file: `nano ~/.config/sxhkd/sxhkdrc`
